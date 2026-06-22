@@ -1,16 +1,69 @@
-# React + Vite
+# SocioSphere
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+SocioSphere is a Society Management System developed using React.js, Redux Toolkit, React Router, and Tailwind CSS.
 
-Currently, two official plugins are available:
+The project is designed to simplify the management of residential societies by providing separate portals for administrators and residents.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+### Administrator
+- Dashboard
+- Resident Management
+- Complaint Management
+- Notice Board
+- Maintenance Management
+- Profile Management
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Resident
+- Dashboard
+- View Notices
+- Raise Complaints
+- View Maintenance Details
+- Manage Profile
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Redux Toolkit
+- React Router DOM
+- Tailwind CSS
+- Lucide React
+- Vite
+
+## Installation
+
+Clone the repository:
+
+git clone <repository-url>
+
+Move to the project directory:
+
+cd sociosphere
+
+Install dependencies:
+
+npm install
+
+Run the project:
+
+npm run dev
+
+## Project Status
+
+Currently under development.
+
+Completed:
+- Login Module
+- Protected Routes
+- Admin Layout
+- Sidebar Navigation
+- Navbar
+- Dashboard UI
+
+Upcoming:
+- Resident Management
+- Complaint Module
+- Notice Module
+- Maintenance Module
+- Visitor Management
+- Backend Integration
