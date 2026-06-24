@@ -16,31 +16,18 @@ const users = [
 
   {
     id: 2,
-
     role: "resident",
-
-    name: "Rahul Sharma",
-
-    email: "rahul@gmail.com",
-
+    name: "Swaraj Varghade",
+    email: "swaraj@gmail.com",
     password: "123456",
-
     phone: "9988776655",
-
     gender: "Male",
-
     dob: "1995-02-14",
-
     address: "Flat A-101",
-
     wing: "A",
-
     flatNo: "101",
-
     occupation: "Software Engineer",
-
     familyMembers: 4,
-
     profileImage:
       "https://i.pravatar.cc/150?img=2",
 

@@ -35,8 +35,8 @@ const ProfileDropdown = ({
 
       <button
         onClick={() => {
-          navigate("/admin/profile");
           closeDropdown();
+          navigate("/admin/profile");
         }}
         className="w-full flex items-center gap-3 px-4 py-3 hover:bg-teal-50 text-slate-700"
       >

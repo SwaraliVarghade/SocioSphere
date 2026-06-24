@@ -1,24 +1,33 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 import Login from "../modules/pages/LoginPage/Login";
-import AdminDashboard from "../modules/pages/AdminDashboard/AdminDashBoard";
-import ResidentDashboard from "../modules/pages/ResidentDashboard/ResidentDashboard";
 
 import ProtectedRoutes from "./ProtectedRoutes";
+import AdminDashboard from "../modules/pages/admin/AdminDashboard/AdminDashBoard";
+import ResidentDashboard from "../modules/pages/Resident/ResidentDashboard/ResidentDashboard";
 import AdminLayout from "../components/AdminLayout";
+import ProfileOfAdmin from "../modules/pages/admin/AdminProfile/ProfileOfAdmin";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
 
-        <Route path="/" element={<Login />} />
+        {/* Login */}
+        <Route
+          path="/"
+          element={<Login />}
+        />
 
         {/* Admin Routes */}
         <Route
           path="/admin"
           element={
-            <ProtectedRoutes>
+            <ProtectedRoutes allowedRole="admin">
               <AdminLayout />
             </ProtectedRoutes>
           }
@@ -27,22 +36,36 @@ const AppRoutes = () => {
             path="dashboard"
             element={<AdminDashboard />}
           />
+          <Route
+            path="profile"
+            element={<ProfileOfAdmin/>}
+          />
 
-          
-          {/* <Route path="residents" element={<Residents />} /> */}
-          {/* <Route path="complaints" element={<Complaints />} /> */}
-          {/* <Route path="notices" element={<Notices />} /> */}
+          <Route
+            path="residents"
+            element={<h1>Residents Page</h1>}
+          />
+
+          <Route
+            path="complaints"
+            element={<h1>Complaints Page</h1>}
+          />
         </Route>
 
         {/* Resident Routes */}
         <Route
-          path="/resident/dashboard"
+          path="/resident"
           element={
-            <ProtectedRoutes>
+            <ProtectedRoutes allowedRole="resident">
               <ResidentDashboard />
             </ProtectedRoutes>
           }
-        />
+        >
+          <Route
+            path="dashboard"
+            element={<ResidentDashboard />}
+          />
+        </Route>
 
       </Routes>
     </BrowserRouter>
