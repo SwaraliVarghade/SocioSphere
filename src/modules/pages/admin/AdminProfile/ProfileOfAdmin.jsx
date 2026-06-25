@@ -223,7 +223,7 @@ const ProfileOfAdmin = () => {
         isOpen={openDrawer}
         onClose={() => setOpenDrawer(false)}
         title="Edit Profile">
-          <EditProfile/>
+          <EditProfile onClose={() => setOpenDrawer(false)}/>
       </CustomDrawer>
     </div>
   );
